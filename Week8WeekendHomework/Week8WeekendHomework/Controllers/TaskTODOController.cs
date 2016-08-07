@@ -37,7 +37,7 @@ namespace Week8WeekendHomework.Controllers
         
         [HttpPost]
         [Authorize]
-        public ActionResult CreateTask([Bind(Include = "TaskName")] TaskTableHomework task)
+        public ActionResult CreateTask([Bind(Include = "TaskID, TaskName, TaskDescription, TaskDueDate, TaskComplete")] TaskTableHomework task)
         {
             TaskTableHomework.CreateTask(task, User.Identity.Name, taskdb);
 
