@@ -1,0 +1,49 @@
+﻿@model IEnumerable<Week8WeekendHomework.Models.TaskTableHomework>
+
+@{
+    ViewBag.Title = "GetTaskList";
+}
+
+<h2>GetTaskList</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskDueDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskComplete)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskDueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskComplete)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.TaskID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.TaskID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.TaskID })
+            </td>
+        </tr>
+    }
+
+</table>
