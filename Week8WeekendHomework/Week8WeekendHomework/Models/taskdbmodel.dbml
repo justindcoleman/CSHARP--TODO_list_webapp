@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TaskDBHomework" Class="taskdbmodelDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=BIGSHELL\SQLEXPRESS;Initial Catalog=TaskDBHomework;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TaskDBHomeworkConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.TaskTableHomework" Member="TaskTableHomeworks">
+    <Type Name="TaskTableHomework">
+      <Column Name="TaskID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TaskName" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="TaskDescription" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="TaskDueDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="TaskComplete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="TaskTableHomework_TaskUserLogin" Member="TaskUserLogins" ThisKey="TaskID" OtherKey="TaskID" Type="TaskUserLogin" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TaskUserLogins" Member="TaskUserLogins">
+    <Type Name="TaskUserLogin">
+      <Column Name="TaskID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="UserName" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="TaskTableHomework_TaskUserLogin" Member="TaskTableHomework" ThisKey="TaskID" OtherKey="TaskID" Type="TaskTableHomework" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

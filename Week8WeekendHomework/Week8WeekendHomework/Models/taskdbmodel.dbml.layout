@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="taskdbmodel">
+  <DataContextMoniker Name="/taskdbmodelDataContext" />
+  <nestedChildShapes>
+    <classShape Id="b948ecaf-8c70-4d24-84c3-75fa2719ae0c" absoluteBounds="0.75, 0.875, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/taskdbmodelDataContext/TaskTableHomework" />
+      <nestedChildShapes>
+        <elementListCompartment Id="424065c7-59d9-4ef0-bc9b-211a500b6f6f" absoluteBounds="0.765, 1.335, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="43c20144-1843-4413-9ac5-c1a4fd8332b5" absoluteBounds="3.5, 1.25, 2, 1.1939925130208338">
+      <DataClassMoniker Name="/taskdbmodelDataContext/TaskUserLogin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1d996142-d7ed-4e3c-b0cd-59ff6e4e7e3a" absoluteBounds="3.515, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.84699625651042); (3.5 : 1.84699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/taskdbmodelDataContext/TaskTableHomework/TaskTableHomework_TaskUserLogin" />
+      <nodes>
+        <classShapeMoniker Id="b948ecaf-8c70-4d24-84c3-75fa2719ae0c" />
+        <classShapeMoniker Id="43c20144-1843-4413-9ac5-c1a4fd8332b5" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
