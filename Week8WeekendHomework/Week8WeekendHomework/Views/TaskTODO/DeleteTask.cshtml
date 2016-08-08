@@ -1,0 +1,48 @@
+﻿@model Week8WeekendHomework.Models.TaskTableHomework
+@{
+    ViewBag.Title = "Delete Task";
+}
+
+<h2>Delete a task</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.TaskName)
+            @Html.DisplayFor(model => model.TaskName)
+        </div>
+
+    </div>
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.TaskDescription)
+            @Html.DisplayFor(model => model.TaskDescription)
+        </div>
+
+    </div>
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.FormattedDate)
+            @Html.DisplayFor(model => model.FormattedDate)
+        </div>
+
+    </div>
+
+    <div class="form-horizontal">
+        <div class="form-group">
+            @Html.LabelFor(model => model.TaskComplete)
+            @Html.DisplayFor(model => model.TaskComplete)
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Delete Task" class="btn btn-default" />
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Drop Changes", "Index")
+</div>

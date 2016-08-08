@@ -248,9 +248,10 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\TaskTODO\Index.cshtml" />
-    <Content Include="Views\TaskTODO\GetTaskList.cshtml" />
     <Content Include="Views\TaskTODO\CreateTask.cshtml" />
     <Content Include="TaskDBHomework.bak" />
+    <Content Include="Views\TaskTODO\EditTask.cshtml" />
+    <Content Include="Views\TaskTODO\DeleteTask.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

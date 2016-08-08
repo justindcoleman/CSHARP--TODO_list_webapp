@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<Week8WeekendHomework.Models.TaskTableHomework>
 
 @{
-    ViewBag.Title = "GetTaskList";
+    ViewBag.Title = "Task List";
 }
 
-<h2>GetTaskList</h2>
+<h2>Tasks</h2>
 
 <table class="table">
     <tr>
@@ -39,9 +39,9 @@
                 @Html.DisplayFor(modelItem => item.TaskComplete)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.TaskID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.TaskID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.TaskID })
+                @Html.ActionLink("Edit", "EditTask", new { id = item.TaskID }) |
+                @*@Html.ActionLink("Details", "Details", new { id = item.TaskID }) |*@
+                @Html.ActionLink("Delete", "DeleteTask", new { id = item.TaskID })
             </td>
         </tr>
     }

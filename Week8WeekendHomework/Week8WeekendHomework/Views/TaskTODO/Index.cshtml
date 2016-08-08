@@ -1,7 +1,50 @@
-﻿@model Week8WeekendHomework.Models.taskdbmodelDataContext
+﻿@model IEnumerable<Week8WeekendHomework.Models.TaskTableHomework>
+
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Task List";
 }
 
-<h2>Index</h2>
+<h2>Task List</h2>
 
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FormattedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskComplete)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FormattedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskComplete)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditTask", new { id = item.TaskID }) |
+                @Html.ActionLink("Delete", "DeleteTask", new { id = item.TaskID })
+            </td>
+        </tr>
+    }
+    <div>
+        @Html.ActionLink("Return to main", "Index", "Home")
+    </div>
+</table>
